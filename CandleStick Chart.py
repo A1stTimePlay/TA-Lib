@@ -2,6 +2,8 @@
 # Ref: https://matplotlib.org/api/finance_api.html
 
 import pandas as pd
+import numpy as np
+import talib
 from mpl_finance import candlestick_ohlc
 
 
@@ -47,6 +49,4 @@ ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m-%d"))
 plt.gcf().autofmt_xdate()  # Beautify the x-labels
 plt.autoscale(tight=True)
 
-# Save graph to file.
-# plt.savefig('mpl_finance-apple.png')
 plt.show()

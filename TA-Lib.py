@@ -4,14 +4,13 @@ import matplotlib.pyplot as plt
 
 data = np.genfromtxt('sp500.csv', dtype=None, delimiter=',', names=True, encoding=None)
 
-date_before_process = data['Date']
+date = data['Date']
 openp = data['Open']
 highp = data['High']
 lowp = data['Low']
 closep = data['Close']
 volume = data['Volume']
 
-date_after_process = np.asarray(date_before_process, dtype='datetime64')
 
 WMA = talib.WMA(closep, timeperiod=20)
 SMA = talib.SMA(closep, timeperiod=20)
